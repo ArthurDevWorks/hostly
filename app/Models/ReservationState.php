@@ -15,6 +15,7 @@ class ReservationState extends Model
         'state',
         'reservation_id'
     ];
+    
     public function reservation():belongsTo{
         return $this->belongsTo(Reservation::class);
     }
