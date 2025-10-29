@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('reservation_id')->constrained('reservations');
-            $table->decimal('value');
-            $table->dateTime('payment_date');
+            $table->dateTime('dt_payment');
+            $table->decimal('total');
+            $table->string('flag');
+            $table->string('type');
+            $table->string('hash');
             $table->timestamps();
         });
     }

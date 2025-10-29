@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('district');
             $table->string('number');
             $table->string('complement')->nullable();
+            $table->integer('type');
             $table->timestamps();
             $table->softDeletes();
         });

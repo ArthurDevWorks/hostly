@@ -14,15 +14,19 @@ class Payment extends Model
     
     protected $fillabe = [
         'reservation_id',
+        'state_payment_id',
+        'dt_payment',
         'total',
-        'payment_date'
+        'flag',
+        'type',
+        'hash'
     ];
 
     public function reservations():BelongsTo{
         return $this->belongsTo(Reservation::class);
     }
 
-    public function statuses():HasMany{
+    public function statesPayment():HasMany{
         return $this->hasMany(PaymentStatus::class);
     }
 }

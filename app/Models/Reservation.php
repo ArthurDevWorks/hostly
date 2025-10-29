@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use NunoMaduro\Collision\Adapters\Phpunit\State;
 
 class Reservation extends Model
 {
@@ -34,6 +32,6 @@ class Reservation extends Model
         return $this->belongsToMany(Room::class);
     }
     public function state(){
-        return $this->belongsTo(State::class);
+        return $this->belongsTo(ReservationState::class);
     }
 }

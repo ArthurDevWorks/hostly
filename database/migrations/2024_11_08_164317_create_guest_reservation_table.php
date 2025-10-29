@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('guest_id')->constrained('guests');
             $table->foreignId('reservation_id')->constrained('reservations');
-            $table->string('type');
-            $table->dateTime('checkin_at')->nullable();
-            $table->dateTime('checkout_at')->nullable();
+            $table->string('type'); //Main(Principal) /Escort(Acompanhante)
             $table->timestamps();
         });
     }

@@ -20,7 +20,8 @@ class Address extends Model
     'street',
     'district',
     'number',
-    'complement'
+    'complement',
+    'type'
   ];
 
   public function guest():BelongsTo{
